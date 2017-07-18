@@ -1,0 +1,22 @@
+<elastic-2D>
+    <mesh>
+        <node coordinate="xyz" />
+    </mesh>
+    
+    <material name="elastic">
+         <parameter young="6.8e4" poisson="0.21"/>
+    </material>
+
+    <boundaryCondition itemCount="2">
+        <item>1</item>
+    </boundaryCondition>
+
+    <load itemCount="2">
+        <item id="1" type="C3D4"/>
+        <item id="2" type="C3D4"/>
+    </load>
+
+    <solver name="linearExplicit"/>
+    
+</elastic-2D>
+
