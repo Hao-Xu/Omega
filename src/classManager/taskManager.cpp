@@ -1,12 +1,32 @@
 #include "taskManager.h"
-#include "materialManager.h"
 
 using namespace tinyxml2;
 void taskManager::print() {
-    std::cout << " print " << std::endl; 
+    std::cout << " print " << mm << std::endl; 
 }
 
 void taskManager::initialize(int &argc, char ** &argv) {
+
+MPISetup(argc, argv);
+
+getOptions(argc, argv);
+
+printf ("Started!\n");
+printf ("My rank= %d\n", rank);
+//XMLDocument xmlDoc;
+//XMLError eResult = xmlDoc.LoadFile(argv[inputI+1]);
+//XMLCheckResult(eResult);
+
+std::string materialName = "isotropicElastic";
+materialManager * materials = new materialManager(materialName);
+delete materials;
+isotropicElastic * materialElastic = new isotropicElastic;
+elementList.push_back(new elementManager());
+// do some work with message passing 
+
+}
+
+void taskManager::MPISetup(int &argc, char ** &argv) {
 
 MPI_Status stat;
 // initialize MPI  
@@ -16,46 +36,98 @@ MPI_Init(&argc,&argv);
 MPI_Comm_size(MPI_COMM_WORLD,&numtasks);
 
 // get my rank 
-  
 MPI_Comm_rank(MPI_COMM_WORLD,&rank);
-
-switch(rank) {      
-    case 0:
-        printf ("Started!\n");
-	//std::ofstream fstrm;
-	//std::ifstream finput;
-        //finput.open(argv[1]);
-        //finput >> E0 >> Poisson0 >> a1 >> a2 >> a3 >> a4;
-        //finput >> C0 >> C1 >> alpha >> Debug >> fd0;
-        printf ("My rank= %d\n", rank);
-	//std::cout << " E0= " << E0 <<" " << " fd0= " << fd0 << std::endl;  
-        int inputI;
- 	for (int i = 0; i < argc; i++) {
-            if (strcmp("-i", argv[i]) == 0) {
-		  //inputFile = argv[i + 1];  
-		  inputI = i;
-	    }  
-	    //std::cout << " argv[" << i << "] = " << argv[i] << std::endl;
-        }
-	//std::cout << " inputFile = " << inputFile << std::endl;
-	//std::cout << " TEST = " << TEST << std::endl;
-	XMLDocument xmlDoc;
-	XMLError eResult = xmlDoc.LoadFile(argv[inputI+1]);
-        //XMLCheckResult(eResult);
-	break;
-}
-
-
 
 // this one is obvious  
 MPI_Get_processor_name(hostname, &len);
-//printf ("Number of tasks= %d My rank= %d Running on %s\n", numtasks,rank,hostname);
-std::string materialName = "elastic";
-materialManager * materials = new materialManager(materialName);
-delete materials;
-elementList.push_back(new elementManager());
-// do some work with message passing 
+printf ("Number of tasks= %d My rank= %d Running on %s\n", numtasks,rank,hostname);
 
+}
+
+void taskManager::getOptions(int & argc, char ** &argv) {
+
+int c;
+int digit_optind = 0;
+while (1) {
+    int this_option_optind = optind ? optind : 1;
+    int option_index = 0;
+    static struct option long_options[] = {
+        {"add",     required_argument, 0,  0 },
+        {"append",  no_argument,       0,  0 },
+        {"delete",  required_argument, 0,  0 },
+        {"verbose", no_argument,       0,  0 },
+        {"create",  required_argument, 0, 'c'},
+        {"file",    required_argument, 0,  0 },
+        {"help",    no_argument,       0, 'h'},
+        {"input",   required_argument, 0, 'i'},
+        {0,         0,                 0,  0 }
+    };
+
+    c = getopt_long(argc, argv, "abc:d:i:012",
+                 long_options, &option_index);
+    if (c == -1)
+        break;
+
+    switch (c) {
+        case 0:
+            printf("option %s", long_options[option_index].name);
+            if (optarg)
+                printf(" with arg %s", optarg);
+            printf("\n");
+            break;
+
+        case '0':
+        case '1':
+        case '2':
+            if (digit_optind != 0 && digit_optind != this_option_optind)
+              printf("digits occur in two different argv-elements.\n");
+            digit_optind = this_option_optind;
+            printf("option %c\n", c);
+            break;
+
+       case 'a':
+            printf("option a\n");
+            break;
+
+       case 'b':
+            printf("option b\n");
+            break;
+
+       case 'c':
+            printf("option c with value '%s'\n", optarg);
+            break;
+
+       case 'd':
+            printf("option d with value '%s'\n", optarg);
+            break;
+
+       case 'h':
+            printf("option d with value '%s'\n", optarg);
+            break;
+
+       case 'i':
+	    inputFile = optarg; 
+            printf("Input file: '%s'\n", optarg);
+	    std::cout << "Input file: " << inputFile << std::endl;
+            break;
+
+       case '?':
+            break;
+
+       default:
+            printf("?? getopt returned character code 0%o ??\n", c);
+    }
+}
+
+if (optind < argc) {
+    printf("non-option ARGV-elements: ");
+    while (optind < argc)
+        printf("%s ", argv[optind++]);
+        printf("\n");
+}
+}
+
+void taskManager::readXML(int &argc, char ** &argv) {
 
 }
 
@@ -72,6 +144,7 @@ while (!elementList.empty())
 {
     elementList.pop_back();
 }
+
 MPI_Finalize();
 
 }

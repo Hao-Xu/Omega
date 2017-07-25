@@ -4,6 +4,12 @@
 #include<iostream>
 #include<string>
 
+/**
+ * @file elementManager.h
+ * @author Hao Xu
+ * @date created on 2017/07/21
+ */
+
 class elementManager {
 
 public:
