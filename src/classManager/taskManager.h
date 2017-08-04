@@ -10,6 +10,8 @@
 #include "mpi.h"
 #include "tinyxml2/tinyxml2.h"
 #include "elementManager.h"
+#include "constitutive/material.h"
+#include "constitutive/materialFactory.h"
 #include "materialManager.h"
 #include "solverManager.h"
 
@@ -38,6 +40,7 @@ private:
     char hostname[MPI_MAX_PROCESSOR_NAME];
     std::string inputFile;
     //std::vector<int> elementList;
+    std::vector<material*> materialList;
     std::vector<elementManager *> elementList;
     void MPISetup(int &argc, char ** &argv);
     void readXML(int &argc, char ** &argv);

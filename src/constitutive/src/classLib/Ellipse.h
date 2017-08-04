@@ -8,6 +8,7 @@
 
 class Ellipse : public material {
   public:
+        virtual ~Ellipse() { std::cout << "delete ellipse" <<std::endl; }	  
     void draw() {  std::cout << "drawing an ellipse " <<std::endl;  }
   private:
     static materialFactoryRegister<Ellipse> AddToFactory_;

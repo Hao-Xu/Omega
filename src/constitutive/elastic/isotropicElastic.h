@@ -1,37 +1,39 @@
-// isotropicElastic.h
-//   An isotropic elastic model.
-// History:
-// 2017/07/21  Hao Xu   First release 
-
 #ifndef ISOTROPICELASTIC_H
 #define ISOTROPICELASTIC_H
 
-//#include "../mathLib/arithmetic.h"
+#include <iostream>
+//#include <unordered_map>
+//#include <functional>
+//#include <vector>
 #include "lib/mathLib/r1Tensor.h"
 #include "lib/mathLib/r2Tensor.h"
-#include "lib/mathLib/r3Tensor.h"
-//#include "../mathLib/errInfo.h"
-//#include "../mathLib/gaussj.h"
-//#include "../mathLib/eigen.h"
+//#include "lib/mathLib/r3Tensor.h"
+#include "constitutive/material.h"
+#include "constitutive/materialFactory.h"
 
-/**
- * @file isotropicElastic.h
- * @author Hao Xu
- * @date created on 2017/07/21
- */
-
-class isotropicElastic : public materialManager {
-    public:
-      // Creators
-      isotropicElastic(double youngsModulus, double poissonsRatio);
-      void update(r1Tensor<double> & strainInc, r1Tensor<double> & stressInc); 
-      void printVariables(); 
-
-    private:
-      double bulkModulus,shearModulus,youngsModulus,poissonsRatio;
-
-      r2Tensor<double> stiffness;
-      r1Tensor<double> dstran,Stress,dSig;
+class isotropicElastic : public material {
+  public:
+      isotropicElastic(): youngsModulus(0.), poissonsRatio(0.),
+                         stiffness(6, 6, 0.) {}
+      isotropicElastic(double E, double nu):
+                      youngsModulus(E), poissonsRatio(nu) {}
+      virtual ~isotropicElastic() {}     
+      void initialize() {}
+      void assignParameter(std::string parameterName) {}
+      void update(r1Tensor<double> & strainInc, r1Tensor<double> & stressInc, 
+                  r1Tensor<double> & Stress); 
+      void printVariables() { std::cout << "isotropic elastic model" << std::endl; }
+      void draw() {}
+      
+  private:
+      int mm, nn, dimension;
+      double bulkModulus, shearModulus, youngsModulus, poissonsRatio;
+      r1Tensor<double> dStran, Stress, dSig;
+      r2Tensor<double> stiffness; 
+      void assembleStiffness();
+      static materialFactoryRegister<isotropicElastic> AddToFactory_;
 };
 
-#endif 
+#endif
+
+

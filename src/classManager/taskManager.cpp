@@ -18,10 +18,14 @@ printf ("My rank= %d\n", rank);
 //XMLCheckResult(eResult);
 
 std::string materialName = "isotropicElastic";
-materialManager * materials = new materialManager(materialName);
-delete materials;
-isotropicElastic * materialElastic = new isotropicElastic;
-elementList.push_back(new elementManager());
+printf ("material1\n");
+materialList.push_back(materialFactory::instantiate(materialName));
+printf ("material2\n");
+materialList[0]->draw();
+printf ("material3\n");
+materialList[0]->printVariables();
+printf ("material4\n");
+delete materialList[0];
 // do some work with message passing 
 
 }

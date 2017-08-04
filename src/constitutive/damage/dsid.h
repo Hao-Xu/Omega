@@ -15,9 +15,9 @@
 //#include "../mathLib/eigen.h"
 
 /**
- * @file dsid.h
- * @author Hao Xu
- * @date created on 2017/07/21
+ * \file dsid.h
+ * \author Hao Xu
+ * \date created on 2017/07/21
  */
 
 class dsid : public materialManager {
