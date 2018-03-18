@@ -4,3 +4,6 @@
 [submodule "lib/tinyxml2"]
 	path = lib/tinyxml2
 	url = https://github.com/Hao-Xu/tinyxml2
+[submodule "lib/elements"]
+	path = lib/elements
+	url = https://github.com/Hao-Xu/elements
