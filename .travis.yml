@@ -9,6 +9,7 @@ cache:
 
 compiler:
     - mpic++
+    - mpicc
     - gcc
     - g++
 
