@@ -3,7 +3,7 @@ sudo : false
 language: C++
 
 compiler:
-    - g++
+    - mpic++
 
 install:
     - ./install
