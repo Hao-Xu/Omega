@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#sudo apt-get install mpich2
+sudo apt-get install mpich2
 
 if [ ! -d bin ]; then
   mkdir bin
