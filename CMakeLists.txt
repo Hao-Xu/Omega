@@ -19,7 +19,7 @@ set(CMAKE_EXE_LINKER_FLAGS ${CMAKE_EXE_LINKER_FLAGS})
 aux_source_directory(./src DIR_CXXS)
 aux_source_directory(./src/constitutive DIR_CONSTITUTIVES)
 aux_source_directory(./src/constitutive/elastic DIR_ELASTICS)
-aux_source_directory(./src/tinyxml2 DIR_XMLS)
+aux_source_directory(./lib/tinyxml2 DIR_XMLS)
 aux_source_directory(./src/classManager DIR_CLASSMANAGERS)
 
 set(DIR_SRCS ${DIR_CXXS} ${DIR_XMLS} ${DIR_CLASSMANAGERS}
