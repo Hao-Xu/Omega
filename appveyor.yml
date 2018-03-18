@@ -1,0 +1,9 @@
+image: ubuntu
+
+install:
+- ./install
+
+test_script:
+- echo "buulding is done"
+
+build: off
