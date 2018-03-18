@@ -1,0 +1,6 @@
+[submodule "lib/mathLib"]
+	path = lib/mathLib
+	url = https://github.com/Hao-Xu/mathLib
+[submodule "lib/tinyxml2"]
+	path = lib/tinyxml2
+	url = https://github.com/Hao-Xu/tinyxml2
