@@ -13,3 +13,8 @@ What it does.
 -------------
 	
 In brief, Omega is a deveoping finite element code.
+
+Installation
+-------------
+	
+./install

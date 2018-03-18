@@ -92,7 +92,8 @@ Inheritance diagram for isotropicElastic:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisotropic_elastic__inherit__graph.png" border="0" usemap="#isotropic_elastic_inherit__map" alt="Inheritance graph"/></div>
 <map name="isotropic_elastic_inherit__map" id="isotropic_elastic_inherit__map">
-<area shape="rect" id="node2" href="classmaterial_manager.html" title="materialManager" alt="" coords="5,5,127,31"/>
+<area shape="rect" id="node2" href="classmaterial.html" title="material" alt="" coords="26,5,95,31"/>
+<area shape="rect" id="node3" href="classmaterial_manager.html" title="materialManager" alt="" coords="118,5,240,31"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -100,12 +101,31 @@ Collaboration diagram for isotropicElastic:</div>
 <div class="dyncontent">
 <div class="center"><img src="classisotropic_elastic__coll__graph.png" border="0" usemap="#isotropic_elastic_coll__map" alt="Collaboration graph"/></div>
 <map name="isotropic_elastic_coll__map" id="isotropic_elastic_coll__map">
-<area shape="rect" id="node2" href="classmaterial_manager.html" title="materialManager" alt="" coords="5,5,127,31"/>
+<area shape="rect" id="node2" href="classmaterial.html" title="material" alt="" coords="26,5,95,31"/>
+<area shape="rect" id="node3" href="classmaterial_manager.html" title="materialManager" alt="" coords="118,5,240,31"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a2e05711ea5f4bc2e9b72ea431786846f"><td class="memItemLeft" align="right" valign="top"><a id="a2e05711ea5f4bc2e9b72ea431786846f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>isotropicElastic</b> (double E, double nu)</td></tr>
+<tr class="separator:a2e05711ea5f4bc2e9b72ea431786846f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4509cefc87b30e2a42c224bd500045"><td class="memItemLeft" align="right" valign="top"><a id="a6b4509cefc87b30e2a42c224bd500045"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> ()</td></tr>
+<tr class="separator:a6b4509cefc87b30e2a42c224bd500045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabece1a0a47ebe56bcb74ec190087248"><td class="memItemLeft" align="right" valign="top"><a id="aabece1a0a47ebe56bcb74ec190087248"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>assignParameter</b> (std::string parameterName)</td></tr>
+<tr class="separator:aabece1a0a47ebe56bcb74ec190087248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c940442cd89174075bd1e8a4ae3c37f"><td class="memItemLeft" align="right" valign="top"><a id="a2c940442cd89174075bd1e8a4ae3c37f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (r1Tensor&lt; double &gt; &amp;strainInc, r1Tensor&lt; double &gt; &amp;stressInc, r1Tensor&lt; double &gt; &amp;Stress)</td></tr>
+<tr class="separator:a2c940442cd89174075bd1e8a4ae3c37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced4646179b73c77af191c6716ea32d0"><td class="memItemLeft" align="right" valign="top"><a id="aced4646179b73c77af191c6716ea32d0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printVariables</b> ()</td></tr>
+<tr class="separator:aced4646179b73c77af191c6716ea32d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719c4f9f33246c00c7ba3c2af5563141"><td class="memItemLeft" align="right" valign="top"><a id="a719c4f9f33246c00c7ba3c2af5563141"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> ()</td></tr>
+<tr class="separator:a719c4f9f33246c00c7ba3c2af5563141"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b2f2897d0174e6b7feb44bbc498699"><td class="memItemLeft" align="right" valign="top"><a id="ab3b2f2897d0174e6b7feb44bbc498699"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>isotropicElastic</b> (double youngsModulus, double poissonsRatio)</td></tr>
 <tr class="separator:ab3b2f2897d0174e6b7feb44bbc498699"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -115,6 +135,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (r1Tensor&
 <tr class="memitem:aced4646179b73c77af191c6716ea32d0"><td class="memItemLeft" align="right" valign="top"><a id="aced4646179b73c77af191c6716ea32d0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>printVariables</b> ()</td></tr>
 <tr class="separator:aced4646179b73c77af191c6716ea32d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b4509cefc87b30e2a42c224bd500045"><td class="memItemLeft" align="right" valign="top"><a id="a6b4509cefc87b30e2a42c224bd500045"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> ()</td></tr>
+<tr class="separator:a6b4509cefc87b30e2a42c224bd500045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0dd139f8fa318e03b897a0425fbfb41"><td class="memItemLeft" align="right" valign="top"><a id="ae0dd139f8fa318e03b897a0425fbfb41"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>assignParameter</b> (std::string parameterName,) void update()</td></tr>
+<tr class="separator:ae0dd139f8fa318e03b897a0425fbfb41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aced4646179b73c77af191c6716ea32d0"><td class="memItemLeft" align="right" valign="top"><a id="aced4646179b73c77af191c6716ea32d0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printVariables</b> ()</td></tr>
+<tr class="separator:aced4646179b73c77af191c6716ea32d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719c4f9f33246c00c7ba3c2af5563141"><td class="memItemLeft" align="right" valign="top"><a id="a719c4f9f33246c00c7ba3c2af5563141"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> ()</td></tr>
+<tr class="separator:a719c4f9f33246c00c7ba3c2af5563141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmaterial"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmaterial')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmaterial.html">material</a></td></tr>
+<tr class="memitem:a21be7be559da44d17eb7f6ad8cd4bbb3 inherit pub_methods_classmaterial"><td class="memItemLeft" align="right" valign="top"><a id="a21be7be559da44d17eb7f6ad8cd4bbb3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+<tr class="separator:a21be7be559da44d17eb7f6ad8cd4bbb3 inherit pub_methods_classmaterial"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21be7be559da44d17eb7f6ad8cd4bbb3 inherit pub_methods_classmaterial"><td class="memItemLeft" align="right" valign="top"><a id="a21be7be559da44d17eb7f6ad8cd4bbb3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+<tr class="separator:a21be7be559da44d17eb7f6ad8cd4bbb3 inherit pub_methods_classmaterial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmaterial_manager"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmaterial_manager')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmaterial_manager.html">materialManager</a></td></tr>
 <tr class="memitem:a7115733155d4980fb064ad2aba49f3b6 inherit pub_methods_classmaterial_manager"><td class="memItemLeft" align="right" valign="top"><a id="a7115733155d4980fb064ad2aba49f3b6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>materialManager</b> (int m)</td></tr>
@@ -128,9 +167,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>assign</b> ()</td></t
 <tr class="memitem:a457cc335abb8e90f97a6a046b95d1162 inherit pub_methods_classmaterial_manager"><td class="memItemLeft" align="right" valign="top"><a id="a457cc335abb8e90f97a6a046b95d1162"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
 <tr class="separator:a457cc335abb8e90f97a6a046b95d1162 inherit pub_methods_classmaterial_manager"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classmaterial"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classmaterial')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classmaterial.html">material</a></td></tr>
+<tr class="memitem:ac21199a1ff299d5659537582d142cd86 inherit pro_attribs_classmaterial"><td class="memItemLeft" align="right" valign="top"><a id="ac21199a1ff299d5659537582d142cd86"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>protected_name</b></td></tr>
+<tr class="separator:ac21199a1ff299d5659537582d142cd86 inherit pro_attribs_classmaterial"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa14a53f5518bea9c49c4533e5116a060 inherit pro_attribs_classmaterial"><td class="memItemLeft" align="right" valign="top"><a id="aa14a53f5518bea9c49c4533e5116a060"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>protected_mm</b></td></tr>
+<tr class="separator:aa14a53f5518bea9c49c4533e5116a060 inherit pro_attribs_classmaterial"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb00d1524c7c24f9d3ed0be9f81053d6 inherit pro_attribs_classmaterial"><td class="memItemLeft" align="right" valign="top"><a id="acb00d1524c7c24f9d3ed0be9f81053d6"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>protected_nn</b></td></tr>
+<tr class="separator:acb00d1524c7c24f9d3ed0be9f81053d6 inherit pro_attribs_classmaterial"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9476163cbfc6a24de796b1ac5934c4c8 inherit pro_attribs_classmaterial"><td class="memItemLeft" align="right" valign="top"><a id="a9476163cbfc6a24de796b1ac5934c4c8"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>elastic</b></td></tr>
+<tr class="separator:a9476163cbfc6a24de796b1ac5934c4c8 inherit pro_attribs_classmaterial"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/haoxu/Documents/git/Omega/src/constitutive/elastic/<a class="el" href="isotropic_elastic_8h_source.html">isotropicElastic.h</a></li>
+<li>/Users/haoxu/Documents/git/Omega/src/constitutive/elastic/<a class="el" href="elastic_2isotropic_elastic_8h_source.html">isotropicElastic.h</a></li>
 <li>/Users/haoxu/Documents/git/Omega/src/constitutive/elastic/isotropicElastic.cpp</li>
 </ul>
 </div><!-- contents -->

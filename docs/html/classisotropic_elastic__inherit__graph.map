@@ -1,3 +1,4 @@
 <map id="isotropicElastic" name="isotropicElastic">
-<area shape="rect" id="node2" href="$classmaterial_manager.html" title="materialManager" alt="" coords="5,5,127,31"/>
+<area shape="rect" id="node2" href="$classmaterial.html" title="material" alt="" coords="26,5,95,31"/>
+<area shape="rect" id="node3" href="$classmaterial_manager.html" title="materialManager" alt="" coords="118,5,240,31"/>
 </map>

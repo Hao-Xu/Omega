@@ -1,0 +1,39 @@
+<elastic>
+    
+    <FloatValue>0.5</FloatValue>
+    
+    <IntValue>10</IntValue>
+    
+    <Date day="26" month="April" year="2014" dateFormat="26/04/2014"/>
+    
+
+    
+    <material name="elastic" domainSet="all">
+         <parameter young="6.8e4" poisson="0.21"/>
+    </material>
+
+    <boundaryCondition itemCount="2">
+        <item>1</item>
+    </boundaryCondition>
+
+    <load itemCount="2">
+        <item id="1" type="C3D4"/>
+        <item id="2" type="C3D4"/>
+    </load>
+
+    <solver name="linearExplicit"/>
+    
+    <List itemCount="8">
+        <Item>0</Item>
+        <Item>1</Item>
+        <Item>2</Item>
+        <Item>3</Item>
+        <Item>4</Item>
+        <Item>5</Item>
+        <Item>6</Item>
+        <Item>7</Item>
+    </List>
+
+</elastic>
+
+

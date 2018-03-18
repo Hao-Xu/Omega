@@ -1,0 +1,11 @@
+sudo : false
+
+language: C++
+
+compiler:
+    - g++
+
+install:
+    - ./install
+
+      

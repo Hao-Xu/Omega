@@ -1,3 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classtask_manager.html" title="taskManager" alt="" coords="5,5,104,31"/>
+<area shape="rect" id="node1" href="$classmaterial.html" title="material" alt="" coords="32,55,100,80"/>
+<area shape="rect" id="node2" href="$class_ellipse.html" title="Ellipse" alt="" coords="200,5,260,31"/>
+<area shape="rect" id="node3" href="$classisotropic_elastic.html" title="isotropicElastic" alt="" coords="175,104,285,129"/>
+<area shape="rect" id="node4" href="$class_square.html" title="Square" alt="" coords="198,55,262,80"/>
+<area shape="rect" id="node5" href="$classmaterial_manager.html" title="materialManager" alt="" coords="5,128,127,153"/>
+<area shape="rect" id="node6" href="$classdsid.html" title="dsid" alt="" coords="207,153,253,179"/>
 </map>
