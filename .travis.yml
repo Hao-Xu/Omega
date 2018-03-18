@@ -2,10 +2,22 @@ sudo : ture
 
 language: C++
 
+cache:
+  directories:
+  - mpich2        
+
+
 compiler:
     - mpic++
+    - gcc
+    - g++
+
+before_install:
+    - sudo apt-get install mpich2      
 
 install:
     - ./install
 
+script:
+    - echo "building is done"    
       
