@@ -1,6 +1,8 @@
 # Omega
 Omega project
 
+[![Build Status](https://travis-ci.org/Hao-Xu/Omega.svg?branch=master)](https://travis-ci.org/Hao-Xu/Omega)
+
 The master is hosted on github:
 https://github.com/Hao-Xu/Omega.git
 
