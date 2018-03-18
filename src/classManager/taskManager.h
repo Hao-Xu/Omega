@@ -14,7 +14,7 @@
 #include <vector>
 #include <getopt.h>
 #include "mpi.h"
-#include "tinyxml2/tinyxml2.h"
+#include "lib/tinyxml2/tinyxml2.h"
 #include "elementManager.h"
 #include "constitutive/material.h"
 #include "constitutive/materialFactory.h"
