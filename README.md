@@ -16,7 +16,18 @@ What it does.
 	
 In brief, Omega is a deveoping finite element code.
 
+Download
+-------------
+
+```bash
+git clone https://github.com/Hao-Xu/Omega.git
+git submodule init
+git submodule update
+```	
+
 Installation
 -------------
 	
+```bash
 ./install
+```
